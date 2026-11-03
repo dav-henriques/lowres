@@ -74,19 +74,19 @@
 <body>
 <header>
   <h1>low <span>res</span></h1>
-  <p>Diminua a qualidade de uma imagem como se ela tivesse sido feita em resolução menor. Tudo roda no seu navegador — nada é enviado.</p>
+  <p>Lower an image's quality as if it were originally created at a smaller resolution. Everything runs in your browser — nothing is uploaded.</p>
 </header>
 
 <main>
   <label class="drop" id="drop">
     <input type="file" id="file" accept="image/*">
-    <strong>Clique ou arraste uma imagem aqui</strong><br>
-    também dá para colar (Ctrl+V)
+    <strong>Click or drag an image here</strong><br>
+    you can also paste (Ctrl+V)
   </label>
 
   <section class="panel controls hidden" id="controls">
     <div class="row">
-      <label for="scale">Resolução <output id="scaleOut">25%</output></label>
+      <label for="scale">Resolution <output id="scaleOut">25%</output></label>
       <input type="range" id="scale" min="1" max="100" value="25">
       <div class="presets">
         <button data-w="1280">720p</button>
@@ -94,21 +94,21 @@
         <button data-w="640">360p</button>
         <button data-w="426">240p</button>
         <button data-w="256">144p</button>
-        <button data-w="160">Celular 2005</button>
+        <button data-w="160">2005 Mobile</button>
       </div>
       <div class="info" id="dims"></div>
     </div>
 
     <div class="row">
-      <label for="jpeg">Compressão JPEG <output id="jpegOut">desligada</output></label>
+      <label for="jpeg">JPEG Compression <output id="jpegOut">Off</output></label>
       <input type="range" id="jpeg" min="0" max="100" value="0">
-      <div class="info">0 = sem compressão extra. Quanto mais alto, mais artefatos de JPEG (blocos e borrões).</div>
+      <div class="info">0 = no additional compression. Higher values create more JPEG artifacts (blocking and blur).</div>
     </div>
 
     <div class="opts">
-      <label><input type="radio" name="mode" value="smooth" checked> Ampliar suave (foto de baixa resolução)</label>
-      <label><input type="radio" name="mode" value="pixel"> Ampliar pixelado (pixels visíveis)</label>
-      <label><input type="checkbox" id="keepSize" checked> Manter o tamanho original ao baixar</label>
+      <label><input type="radio" name="mode" value="smooth" checked> Smooth upscale (low-resolution photo)</label>
+      <label><input type="radio" name="mode" value="pixel"> Pixelated upscale (visible pixels)</label>
+      <label><input type="checkbox" id="keepSize" checked> Preserve original dimensions when downloading</label>
     </div>
   </section>
 
@@ -117,12 +117,12 @@
       <canvas id="out"></canvas>
       <img id="orig" class="before" alt="Original">
       <div class="handle" id="handle"></div>
-      <span class="tag l">Original</span><span class="tag r">Resultado</span>
+      <span class="tag l">Original</span><span class="tag r">Result</span>
     </div>
-    <p class="info">Arraste sobre a imagem para comparar antes e depois.</p>
+    <p class="info">Drag across the image to compare the before and after.</p>
     <div class="actions">
       <span class="info" id="outInfo"></span>
-      <button class="primary" id="download">Baixar imagem</button>
+      <button class="primary" id="download">Download Image</button>
     </div>
   </section>
 </main>
